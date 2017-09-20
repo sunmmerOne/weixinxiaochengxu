@@ -1,0 +1,346 @@
+/* pages/groupDetial/groupDetial.wxss */
+image{
+  width: 100%;
+}
+.main-content {
+  position: relative;
+  background: #fff;
+  margin: 0rpx 0 90rpx 0;
+}
+
+.grup-img {
+  width: 100%;
+}
+
+.grup-img image {
+  width: 100%;
+}
+
+.remark {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 25rpx;
+  border-bottom: 15rpx solid transparent;
+  border-top: 100rpx solid rgba(225, 122, 46, 0.7);
+  border-left: 52rpx solid rgba(225, 122, 46, 0.7);
+  border-right: 52rpx solid rgba(225, 122, 46, 0.7);
+  z-index: 90;
+  font-size: 36rpx;
+}
+
+.remark .text {
+  width: 100rpx;
+  height: 50rpx;
+  margin-top: -70rpx;
+  margin-left: -50rpx;
+  position: absolute;
+  color: #fff;
+  text-align: center;
+}
+
+.group-title, .price-ctl, .group-info, .group-member, .grup-tips, .remind-msg {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20rpx;
+}
+
+.group-title .title {
+  display: block;
+  font-size: 36rpx;
+  color: #333;
+  line-height: 80rpx;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.group-title .desc {
+  font-size: 26rpx;
+  line-height: 30rpx;
+  color: #999;
+  width: 100%;
+}
+
+.price-ctl {
+  line-height: 90rpx;
+  overflow: hidden
+}
+
+.price-ctl .price {
+  width: 550rpx;
+  text-align: left;
+  color: #999;
+  font-size: 30rpx;
+  float: left;
+}
+
+.price-ctl .discount-rate {
+  width: 160rpx;
+  text-align: right;
+  float: right;
+  font-size: 30rpx;
+  color: #ff701e;
+}
+
+.price-ctl .price .price-rmb {
+  color: #ff701e;
+  font-size: 40rpx;
+}
+
+.price-ctl .price .rmb {
+  color: #ff701e;
+}
+
+.price-ctl .price .i {
+  text-decoration: line-through;
+  font-style: normal;
+}
+
+.group-info {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 84rpx;
+}
+
+.group-info .group-count {
+  color: #ff701e;
+  font-size: 26rpx;
+  float: left;
+}
+
+.group-info .group-endtime {
+  vertical-align: baseline;
+}
+
+.space-div {
+  clear: both;
+  width: 100%;
+  height: 10rpx;
+  background: #f8f8f8;
+}
+
+.group-enty {
+  position: relative;
+  box-sizing: border-box;
+  height: 84rpx;
+  width: 100%;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  color: #ff701e;
+  line-height: 84rpx;
+}
+
+.group-enty .span {
+  position: absolute;
+  right: 20rpx;
+  width: 20rpx;
+  height: 20rpx;
+  line-height: 84rpx;
+  display: block;
+  top: 0;
+}
+
+.group-enty .span image {
+  width: 100%;
+  height: 30rpx;
+}
+
+.remind-msg {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 36rpx;
+  color: #ff701e;
+  line-height: 60rpx;
+  padding: 15rpx 20rpx;
+}
+.group-member {
+	color: #999;
+	font-size: 36rpx;
+	line-height: 80rpx;
+}
+.group-member .span {
+	color: #ff701e;
+	vertical-align: baseline;
+}
+.mem-info {
+	margin: 10rpx 0;
+}
+.mem-info .li {
+  position: relative;
+	width: 100rpx;
+	height: 100rpx;
+	margin: 0 0 22rpx 18rpx;
+	float: left;
+}
+.tuanz {
+	position: absolute;
+	right: 0;
+	bottom: 20rpx;
+	width: 50rpx;
+	height: 32rpx;
+}
+.mem-info .li image {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.grup-tips {
+	padding-bottom: 30rpx;
+}
+.grup-tips .label {
+	font-size: 26rpx;
+	color: #333;
+	line-height: 64rpx;
+}
+.grup-tips .tips {
+	border-top: 1px solid #e5e5e5;
+	font-size: 26rpx;
+	color: #999;
+	padding: 20rpx 0;
+}
+.more-group {
+	background: #f8f8f8;
+}
+.more-group .p {
+  display: block;
+	color: #999;
+	text-align: center;
+	font-size: 26rpx;
+	line-height: 60rpx;
+}
+.more-group-list {
+	padding: 0 20rpx 30rpx 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row ;
+  justify-content:space-between;
+}
+.more-group-list .li {
+	background: #fff;
+	width: 345rpx;
+	float: left;
+	margin-bottom: 20rpx;
+	/*height: 1.54;*/
+  
+  
+}
+.more-group-list .li image{
+  width: 100%;
+  height: 260rpx;
+}
+.group-title-more,
+.price-ctl-more {
+	padding: 0 20rpx 0 10rpx;
+}
+.group-title-more .title {
+  display: block;
+	font-size: 30rpx;
+	color: #333;
+	line-height: 80rpx;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.group-title-more .desc {
+	font-size: 26rpx;
+	line-height: 30rpx;
+	color: #999;
+	width: 100%;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+
+.price-ctl-more {
+	line-height: 90rpx;
+}
+
+.price-ctl-more .price {
+	width: 240rpx;
+	text-align: left;
+	color: #999;
+	font-size: 28rpx;
+	float: left;
+}
+
+.price-ctl-more .discount-rate {
+	width: 75rpx;
+	text-align: right;
+	float: right;
+	font-size: 26rpx;
+	color: #ff701e;
+}
+
+.price-ctl-more .price .price-rmb {
+	color: #ff701e;
+	font-size: 28rpx;
+}
+
+.price-ctl-more .price .rmb {
+	color: #ff701e;
+}
+
+.price-ctl-more .price  .i {
+	text-decoration: line-through;
+	font-style: normal;
+}
+.bottomBtn {
+	width: 100%;
+	height: 90rpx;
+	line-height: 90rpx;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	font-size: 36rpx;
+	z-index: 99;
+}
+.onebtn {
+	width: 100%;
+	height: 100%;
+	background: #ff0000;
+	color: #fff;
+	text-align: center;
+}
+
+.onebtn1{
+	width: 100%;
+	height: 100%;
+	background: #ff701e;
+	color: #fff;
+	text-align: center;
+}
+
+.twoBtn {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+}
+
+.no-login{
+	width: 100%;
+	height: 100%;
+}
+.leftbtn {
+	width: 50%;
+	height: 100%;
+	background: #ff701e;
+	float: left;
+}
+
+.rightbtn {
+	width: 50%;
+	height: 100%;
+	background: #ff0000;
+	float: right;
+}
+.join_upper_limit{
+	vertical-align: baseline;
+}

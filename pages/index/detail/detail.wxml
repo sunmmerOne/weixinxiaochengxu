@@ -1,0 +1,2 @@
+<import src="../index-templ/index-templ.wxml" />
+<template is="scrollTopView" data="{{items}}"></template>

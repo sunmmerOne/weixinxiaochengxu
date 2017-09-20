@@ -1,0 +1,11 @@
+@import '../index-templ/index-templ.wxss';
+.movie-list-container{
+  display: flex;
+  flex-direction: row
+}
+.scroll-contaner{
+    display: flex;
+    justify-content: space-between;
+    width: 632rpx;
+    line-height: 55rpx;
+}

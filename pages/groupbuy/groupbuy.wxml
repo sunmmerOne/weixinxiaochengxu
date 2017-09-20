@@ -1,0 +1,30 @@
+<!--pages/groupBuy/groupBuy.wxml-->
+<scroll-view  class="main-content-list" scroll-y="{{true}}">
+  <!--<view class="grup-img">-->
+  <view class="grup-img" wx:for="{{goodsInfo}}">
+    <!--<image src="{{item.hotSaleImage[0].URL}}" class="goodsimg" mode="scaleToFill"></image>-->
+    <image src="{{item.hotSaleImage[0].URL}}" class="goodsimg" mode="scaleToFill" bindtap="goDeatail"  data-hid="{{item.HotSale_ID}}"></image>
+    <view class="remark" wx:if="{{!item.ship_fee}}">
+      <text class="text">包邮</text>
+    </view>
+    <view class="group-title">
+      <text class="title">{{item.product_title}}</text>
+      <text class="desc">{{item.sell_point}}</text>
+    </view>
+    <view class="price-ctl">
+      <view class="price">
+        <text class="rmb">￥</text>
+        <text class="price-rmb">{{item.discount_price}}</text>
+        <text>/</text>
+        <text class="i" wx:if="{{item.market_price>item.discount_price}}">￥{{item.market_price}}</text>
+        <text class="mem-limit"> {{item.parter_number}}人团</text>
+      </view>
+      <view class="discount-rate">
+        <view class="open-group" bindtap="goDeatail" data-hid="{{item.HotSale_ID}}">
+          去开团
+        </view>
+      </view>
+    </view>
+    <view class="space-view"></view>
+  </view>
+</scroll-view>

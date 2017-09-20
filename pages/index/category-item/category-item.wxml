@@ -1,0 +1,19 @@
+<template name="categoryItem">
+  <view class="category-list">
+    <view class="goods-img-left" bindtap="goGoodsDetail" data-goodsId="{{item.goodsGuid}}">
+       <image src="{{item.icon}}"></image>
+    </view>
+    <view class="goods-desc-rt">
+      <view class="goods-name-templ">{{item.goodsName}}</view>
+      <view class="goods-desc">{{item.description}}</view>
+      <view class="goods-price-cart">
+      <view class="goods-price-categoty">
+      小程序专享价{{item.price}}
+      </view>
+      <view class="add-cart" bindtap="addCart">
+         <image src="../../images/newgoodssel@2x.png"></image>
+      </view>
+      </view>
+    </view>
+  </view>
+</template>

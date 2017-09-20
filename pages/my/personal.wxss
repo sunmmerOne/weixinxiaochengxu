@@ -1,0 +1,82 @@
+.page-body-info{
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+}
+
+.user-headr{
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  background: url('http://wmall.wochu.cn/h5/personal/css/images/top.gif');
+  position: relative;
+}
+.userinfo-avatar {
+  border-radius: 140rpx;
+  width: 140rpx;
+  height: 140rpx;
+  margin-top: 50rpx;
+}
+.userinfo-nickname {
+  margin-top: 20rpx;
+  font-size: 38rpx;
+}
+
+.coupon-integral{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80rpx;
+  position: absolute;
+  margin-top: -80rpx;
+  padding: 6rpx 0;
+  background: url('http://wmall.wochu.cn/h5/personal/css/images/tm_bg.png');
+  background-size: 100%;
+}
+
+.coupon, .integral{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  font-size: 30rpx;
+}
+.integral{
+  border-right: 1px solid #fff;
+}
+.widget{
+    position: relative;
+    padding: 20rpx 40rpx;
+    border-bottom: 1px solid #ccc;
+    font-size: 30rpx;
+    line-height: 60rpx;
+    margin-top: 10rpx;
+    background: #fff;
+}
+.widget__name{
+  margin-left: 100rpx;
+}
+.widget__arrow{
+    position: absolute;
+    top: 30rpx;
+    right: 40rpx;
+    width: 20rpx;
+    height: 40rpx;
+}
+.widget__icon{
+    position: absolute;
+    left: 40rpx;
+    width: 60rpx;
+    height: 60rpx;
+}
+.widget__line{
+    content: " ";
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    right: 20px;
+    height: 1rpx;
+    background-color: #DFDFDF;
+}

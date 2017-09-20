@@ -1,0 +1,84 @@
+@import 'index-templ/index-templ.wxss';
+@import 'category-item/category-item.wxss';
+.top-view{
+  position: fixed;
+  height: 82rpx;
+  width:750rpx; 
+  z-index: 99;
+  top: 0;
+}
+.swipe-content{
+  width: 750rpx;
+  border-bottom: 2rpx solid #777777; 
+}
+.swiper-tab{  
+    display: flex;
+    flex-direction: row;
+} 
+.swiper-tab-list{  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 28rpx;  
+    color: #777777; 
+    padding:0 16rpx;
+    line-height: 80rpx;
+    white-space: nowrap; 
+}  
+.swipe-tab-name{
+  display: inline-block;
+}
+.on{ color: #da7c0c;  
+    border-bottom: 5rpx solid #da7c0c;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden;margin-top: 82rpx;z-index: 1}  
+.swiper-box view{  
+    text-align: center;  
+}
+.homePage {
+  background-color: #f8f8f8;
+}
+
+.home-swiper {
+  width: 750rpx;
+  height: 350rpx;
+}
+
+.home-swiper image {
+  width: 750rpx;
+  height: 350rpx;
+}
+
+.recommendedContent {
+  width: 750rpx;
+  height: 200rpx;
+}
+
+.recommendedContent image {
+  height: 200rpx;
+  width: 25%;
+}
+.home-goods {
+  background-color: #f8f8f8;
+}
+.category-list-name{
+  line-height: 80rpx;
+  border-bottom: 1px solid #ccc;
+  font-size: 30rpx;
+  color: #333;
+  margin: 0 20rpx;
+}
+.category-list-contaner{
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.data-load{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+

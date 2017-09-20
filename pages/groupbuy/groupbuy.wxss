@@ -1,0 +1,109 @@
+.main-content-list{
+    display: initial;
+}
+image{
+  display: block;
+}
+.space-view{
+  clear: both;
+}
+.grup-img{
+  position: relative;
+}
+.remark{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 25rpx;
+    border-bottom: 15rpx solid transparent;
+    border-top: 100rpx solid rgba(225, 122, 46, 0.7);
+    border-left: 52rpx solid rgba(225, 122, 46, 0.7);
+    border-right: 52rpx solid rgba(225, 122, 46, 0.7);
+    z-index: 90;
+    font-size: 36rpx;
+}
+.remark .text {
+    width: 100rpx;
+    height: 50repx;
+    margin-top: -70rpx;
+    margin-left: -50rpx;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+}
+.goodsimg{
+  width: 100%
+}
+.group-title{
+    box-sizing: border-box;
+    padding:0 20rpx;
+    width: 100%;
+    
+}
+.title{
+    display: block;
+    font-size: 36rpx;
+    color: #333;
+    line-height: 80rpx;
+    width: 100%;
+    overflow:hidden; 
+    white-space:nowrap;  
+    text-overflow:ellipsis;
+ 
+}
+.group-title .desc {
+    display: block;
+    font-size: 26rpx;
+    line-height: 30rpx;
+    color: #999;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.price-ctl {
+    line-height: 74rpx;
+    width: 100%;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+.price-ctl .price {
+    width: 510rpx;
+    text-align: left;
+    color: #999;
+    font-size: 30rpx;
+    float: left;
+}
+.price-ctl .price .rmb {
+    color: #ff701e;
+    vertical-align: sub;
+}
+.price-ctl .price .price-rmb {
+    color: #ff701e;
+    font-size: 48rpx;
+}
+.price-ctl .i {
+    text-decoration: line-through;
+    font-style: normal;
+}
+.mem-limit {
+    font-size: 30rpx;
+    color: #e17a2e;
+}
+.price-ctl .discount-rate {
+    width: 200rpx;
+    height: 74rpx;
+    line-height: 74rpx;
+    text-align: right;
+    float: right;
+    font-size: 36rpx;
+    color: #ff701e;
+}
+.open-group {
+    background: #f96d16;
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}

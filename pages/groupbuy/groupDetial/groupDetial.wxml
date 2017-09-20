@@ -1,0 +1,160 @@
+<view class="main-content">
+  <view class="grup-img">
+    <!--<image src="../../imgs/GroupBuy/img1.jpg" mode="scaleToFill"></image>-->
+    <image src="{{goodImg1}}" mode="scaleToFill"></image>
+    <view class="remark">
+      <text class="text">包邮</text>
+    </view>
+    <view class="group-title">
+      <text class="title">{{goodDate.product_title}}</text>
+      <text class="desc">{{goodDate.product_describe}}</text>
+    </view>
+
+    <view class="price-ctl">
+      <view class="price">
+        <text class="rmb">￥</text>
+        <text class="price-rmb">{{goodDate.discount_price}}</text>
+        <text wx:if="{{goodDate.market_price>goodDate.discount_price}}">/</text>
+        <text class="i" wx:if="{{goodDate.market_price>goodDate.discount_price}}">￥{{goodDate.market_price}}</text>
+      </view>
+      <view class="discount-rate">
+        {{goodDate.reduced_rate}}折
+      </view>
+    </view>
+  </view>
+  <view class="space-view"></view>
+  <view class="group-info">
+    <text class="group-count">{{goodDate.parter_number}}</text>人团 | 距团购结束仅剩
+    <text class="group-endtime">{{residualTime}}</text>
+  </view>
+  <view class="space-view"></view>
+  <view class="group-enty">
+    小贴士：如何快速成团
+    <view class="span">
+      <image src="//wmall.wochu.cn/h5/personal/css/images/button_next@3x.png" mode="aspectFit"></image>
+    </view>
+  </view>
+  <view class="remind">
+    <view class="space-view"></view>
+    <view class="remind-msg"> {{goodDate.Message}}</view>
+  </view>
+  <view class="space-view member-space"></view>
+
+  <view class="group-member">
+    <view>
+      <text class="span">1/15人 </text>还差
+      <text class="span">14</text>人参团成功</view>
+    <view class="mem-info">
+      <view class="li">
+        <image src="../../../images/head-logo2.png"></image>
+        <view class="tuanz">
+          <image src="../../../images/tuanz.png"></image>
+        </view>
+      </view>
+      <view class="li">
+        <image src="../../../images/head-logo2.png"></image>
+      </view>
+      <view class="li">
+        <image src="../../../images/head-logo2.png"></image>
+      </view>
+      <view class="li">
+        <image src="../../../images/head-logo2.png"></image>
+      </view>
+      <view class="li">
+        <image src="../../../images/head-logo2.png"></image>
+      </view>
+      <view class="li">
+        <image src="../../../images/head-logo2.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="space-view"></view>
+
+  <view class="grup-tips">
+    <text class="lable">团购小贴士</text>
+    <view class="tips isNotNew" wx:if="{{goodDate.isNew!=2}}">
+      <text>1.每个团购活动用户限参与
+        <text class="join_upper_limit">{{goodDate.join_upper_limit}}</text>次，但开团次数不限。作为团长开团后，如该团还未成功，无法再次开团。 ２.团购属紧俏商品，成团后请尽快付款，如遇当日售罄，请选其他配送时间再次提交结算。 3.团购商品均可以与其他商品一起结算，如果与包邮团购一起结算，其他商品也同时享受包邮。 4.我厨团购仅限上海地区参加（崇明、金山、奉贤除外）。
+
+      </text>
+    </view>
+    <view class="tips isNew" wx:if="{{goodDate.isNew==2}}">
+      <text>1.所有用户均可开团（开团次数不限），仅限新用户参团，即从未下过我厨订单的用户。 2.新用户只能参加一个新手团，如果新用户有正在参加或已成团的新手团，即不能再另外参加其他新手团。 3.团购商品均可以与其他商品一起结算，如果与包邮团购一起结算，其他商品也同时享受包邮。 4.团购商品在团购结束前均可付款，如遇当日售罄，请选其他配送时间再次提交结算。 5.我厨团购仅限上海地区参加（崇明、金山、奉贤除外）。
+
+      </text>
+    </view>
+    <view>
+      <image src="{{goodImg2}}" mode="widthFix"></image>
+    </view>
+  </view>
+  <!--更多团购-->
+  <view class="more-group">
+    <text class="p">更多超值团购</text>
+    <view class="more-group-list">
+      <view class="li" wx:for="{{otherArr}}">
+        <a>
+          <!--<image src="http://hmall.wochu.cn/hotsale/2017-05-23/img/dalianyoutao170523(3).jpg" hid="19790a71296327887dc05571a62ffb352f254e66097fd653a5ca4cfdb33be358" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></image>-->
+          <!--<image src="{{item.hotSaleImage[0].URL}}" hid="19790a71296327887dc05571a62ffb352f254e66097fd653a5ca4cfdb33be358" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></image>-->
+          <block wx:for="{{item.hotSaleImage}}">
+            <image wx:if="{{item.IMAGE_TYPE == 1}}" src="{{item.URL}}" hid="19790a71296327887dc05571a62ffb352f254e66097fd653a5ca4cfdb33be358" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></image>
+          </block>
+
+        </a>
+        <view class="group-title-more">
+          <text class="title">{{item.product_title}}</text>
+          <text class="desc">{{item.product_describe}}</text>
+        </view>
+        <view class="price-ctl-more">
+          <view class="price">
+            <text class="rmb">￥</text>
+            <text class="price-rmb">{{item.discount_price}} </text>
+            <text class="i" wx:if="{{item.market_price>item.discount_price}}"> ￥{{item.market_price}}</text>
+          </view>
+          <text class="discount-rate">{{item.reduced_rate}}折</text>
+        </view>
+      </view>
+      <!--<view class="li">
+        <a>
+          <image src="http://hmall.wochu.cn/hotsale/2017-05-23/img/dalianyoutao170523(3).jpg" hid="19790a71296327887dc05571a62ffb352f254e66097fd653a5ca4cfdb33be358" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></image>
+        </a>
+        <view class="group-title-more">
+          <text class="title">【限量】大连油桃1000g(团购)</text>
+          <text class="desc">【包邮】大连油桃1000g，包邮仅19.9元，原价39.8元</text>
+        </view>
+        <view class="price-ctl-more">
+          <view class="price">
+            <text class="rmb">￥</text>
+            <text class="price-rmb">19.9 </text>
+            <text class="i"> ￥39.8</text>
+          </view>
+          <text class="discount-rate">5折</text>
+        </view>
+      </view>-->
+    </view>
+  </view>
+  <!--按钮-->
+  <view class="bottomBtn">
+    <view class="open-group onebtn">立即开团</view>
+    <!--<view class="payBtn onebtn">立即支付</view>
+		<view class="find-group onebtn1">发现好团</view>
+		<view class="join-group onebtn">参团</view>
+		<view class="share-mygroup onebtn1">分享我的团</view>
+		<view class="open-group onebtn">立即开团</view>
+		<view class="twoBtn">
+			<view class="leftbtn open-roup">开团</view>
+			<view class="rightbtn payBtn ">立即支付</view>
+		</view>
+		<view class="twoBtn">
+			<view class="leftbtn open-roup">开团</view>
+			<view class="rightbtn share-group">分享</view>
+		</view>
+		<view class="twoBtn">
+			<view class="leftbtn open-roup">开团</view>
+			<view class="rightbtn join-group">参团</view>
+		</view>
+		<view class="twoBtn">
+			<view class="leftbtn join-group">参团</view>
+			<view class="rightbtn share-mygroup">分享我的团</view>
+		</view>-->
+  </view>
+</view>

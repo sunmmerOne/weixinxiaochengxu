@@ -1,0 +1,73 @@
+<!--pages/cart/detail/detail.wxml-->
+<view class="detail-wrap">
+  <view class="detail-contaner">
+    <view class="top-banner">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item.picUrl}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!--商品详情-->
+    <view class="base-info">
+      <view class="goods-name">{{goodsName}}</view>
+      <view class="goods-price">
+        <text class="now-price">￥{{price}}</text>
+        <text class="old-price">￥{{marketPrice}}</text>
+      </view>
+      <view class="num-view">
+        <view class="decrease">-</view>
+        <view class="count">2</view>
+        <view class="add">+</view>
+      </view>
+    </view>
+    <view class="goods-comment">
+      <text>商品评价</text>
+      <image src="../../../images/cart/right_arrow_orange.png"></image>
+    </view>
+    <!--产地等-->
+    <view class="goods-intro">
+      <view class="info-text">
+        <view class="line-wrap">
+          <text class="goods-cla">品名：</text>
+          <text>{{goodsName}}</text>
+        </view>
+        <view class="line-wrap">
+          <text style="float:left" class="goods-cla">产地：</text>
+          <text>{{origin1}}</text>
+          <view style="float:right;">
+            <text class="goods-cla">保质期：</text>
+            <text>{{shelfLife}}</text>
+          </view>
+        </view>
+        <view class="line-wrap">
+          <text style="float:left" class="goods-cla">储存条件：</text>
+          <text>{{storageCondition}}</text>
+          <view style="float:right;">
+            <text class="goods-cla">规格：</text>
+            <text>{{specification}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--详细介绍图片展示-->
+    <view wx:for="{{imgIntro}}" class="img-intro">
+      <image mode="widthFix" src="{{item}}"></image>
+    </view>
+  </view>
+  <view class="go-cart">
+    <view class="go-cart-content">
+      <view class="cart-count">
+        <image mode="widthFix" src="../../../images/cart/cart-icon.png"></image>
+        <view class="total-count">
+          <text>2</text>
+        </view>
+      </view>
+      <view class="shop-cart">
+        加入购物车
+      </view>
+    </view>
+  </view>
+</view>

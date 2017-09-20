@@ -1,0 +1,51 @@
+<view class="page-body-info">
+  <view class="user-headr">
+    <block wx:if="{{hasUserInfo === false}}">
+      <wx-image class="userinfo-avatar" src="http://wmall.wochu.cn/h5/personal/css/images/center_image_user@3x.png"></wx-image>
+      <text class="userinfo-nickname">匿名</text>
+    </block>
+    <block wx:if="{{hasUserInfo === true}}">
+      <wx-image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></wx-image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="coupon-integral">
+    <view class="integral">
+      <view>1000</view>
+      <text>积分</text>
+    </view>
+    <view class="coupon">
+      <view>1</view>
+      <text>优惠券</text>
+    </view>
+  </view>
+  <view>
+    <navigator  class="widget">
+      <image  class="widget__icon" src="http://wmall.wochu.cn/h5/personal/css/images/center_icon_allorders@3x.png"></image>
+      <text class="widget__name">全部订单</text>
+      <image class="widget__arrow" src="../../images/arrow.png" background-size="cover" />
+      <view class="widget__line"></view>
+    </navigator>
+    <navigator class="widget">
+    <image  class="widget__icon" src="http://wmall.wochu.cn/h5/personal/css/images/addr_icon.png"></image>
+      <text class="widget__name">我的地址</text>
+      <image class="widget__arrow" src="../../images/arrow.png" background-size="cover" />
+      <view class="widget__line"></view>
+    </navigator>
+    <navigator  class="widget">
+      <image  class="widget__icon" src="http://wmall.wochu.cn/h5/personal/css/images/center_icon_collect@2x.png"></image>
+      <text class="widget__name">我的团购</text>
+      <image class="widget__arrow" src="../../images/arrow.png" background-size="cover" />
+    </navigator>
+    <navigator  class="widget">
+      <image  class="widget__icon" src="http://wmall.wochu.cn/h5/personal/css/images/about-us.png"></image>
+      <text class="widget__name">关于我厨</text>
+      <image class="widget__arrow" src="../../images/arrow.png" background-size="cover" />
+    </navigator>
+    <navigator  class="widget">
+      <image  class="widget__icon" src="http://wmall.wochu.cn/h5/personal/css/images/center_icon_help@3x.png"></image>
+      <text class="widget__name">帮助中心</text>
+      <image class="widget__arrow" src="../../images/arrow.png" background-size="cover" />
+    </navigator>
+  </view>
+</view>

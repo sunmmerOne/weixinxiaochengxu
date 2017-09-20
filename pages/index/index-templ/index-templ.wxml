@@ -1,0 +1,46 @@
+<template name="pageType4">
+  <view class="page-type4-view" bindtap="modeltap">
+    <image src="{{commonItems['0'].imgUrl}}" />
+  </view>
+</template>
+<template name="pageType5">
+  <view class="page-type5-view" bindtap="modeltap">
+    <image src="{{commonItems['0'].imgUrl}}" />
+  </view>
+</template>
+<template name="pageType6">
+  <view class="page-type6-view" bindtap="modeltap">
+    <image src="{{commonItems['0'].imgUrl}}" />
+  </view>
+</template>
+<template name="pageType7">
+  <view class="page-type7-view">
+    <view class="goods-view" wx:for="{{commonItems}}" wx:for-item="item">
+      <image src="{{item.imgUrl}}" />
+      <view class="goods-text">
+        <view class="goods-name">{{item.goodsName}}</view>
+        <view class="goods-marketPrice">￥{{item.marketPrice}}</view>
+        <view class="goods-price">￥{{item.price}}</view>
+        <view class="addToCartImage" bindtap="addCart">
+          <image src="../../images/newgoodssel@2x.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+<template name="scrollTopView">
+  <view class="movie-list">
+  <scroll-view class="top-scroll-view" scroll-x="{{true}}">
+    <view class="scroll-list-container">
+    <block wx:for="{{items}}">
+        <view class="scroll-item">{{item}}</view>
+    </block>
+    </view>
+  </scroll-view>
+</view>
+</template>
+<template name="scrollTopItem">
+  <view class="scroll-item">
+  {{item}}
+  </view>
+</template>

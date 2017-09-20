@@ -1,0 +1,164 @@
+<!--pages/cart/cart.wxml-->
+<view class="cart-wrap">
+  <!--配送地址-->
+  <view class="top-wrap">
+    <view class="addr">
+      <image class="add-img" src="../../images/cart/location.png"></image>
+      <text class="address">浦东新区松林路111号我厨wochushishis</text>
+      <image class="arrow" src="../../images/cart/down-arr.png"></image>
+    </view>
+    <view class="change-btn" bindtap="add">编辑</view>
+  </view>
+  <!--配送时间-->
+  <view class="send-time">
+    <view class="date-time">
+      <text bindtap="chooseDay" data-dayChange="0" class="{{dayTab==0 ? 'current-time' : ''}}">今天配送</text>
+      <text bindtap="chooseDay" data-dayChange="1" class="{{dayTab==1 ? 'current-time' : ''}}">5/23周二</text>
+      <text bindtap="chooseDay" data-dayChange="2" class="{{dayTab==2 ? 'current-time' : ''}}">5/24周三</text>
+      <text bindtap="chooseDay" data-dayChange="3" class="{{dayTab==3 ? 'current-time' : ''}}">5/25周四</text>  
+    </view>
+    <view class="time-part">
+      <view><text bindtap="changeTime" data-current="0" class="{{currentTab==0 ? 'current-time-part' : ''}}">17:30以前</text></view>
+      <view><text bindtap="changeTime" data-current="1" class="{{currentTab==1 ? 'current-time-part' : ''}}">08:00-11:30</text></view>
+      <view><text bindtap="changeTime" data-current="2" class="{{currentTab==2 ? 'current-time-part' : ''}}">15:30-17:30</text></view>
+      <view><text bindtap="changeTime" data-current="3" class="{{currentTab==3 ? 'current-time-part' : ''}}">17:30-20:30</text></view>      
+    </view>  
+  </view>
+  <view class="shadow-line"></view>
+  <!--购物车详情页部分-->
+  <view class="cart-list-item">
+    <view class="promotion-msg">
+      <text class="activity1">活动</text>
+      <text class="activity-say">全场满99包邮</text>
+    </view>
+    <view class="shop-li">
+      <view class="goods-content">
+        <view class="check-btn" catchtap="checkChoose1">
+          <text class="circle"  wx:if="{{!checkedBol1}}"></text>
+          <icon wx:if="{{checkedBol1}}" type="success" size="18" color="#f96d16"/>
+        </view>
+        <view class="goods-img" bindtap="goGoodsDetail" datagoodsId="af096aa3-45c9-4043-b4c9-3c5abb12a1e7">
+          <image src="http://img.i-kitchen.cn/upload/c5ef50c5-7f5f-4f41-9803-f0533cef0208.jpg"></image>
+        </view>
+        <view class="shop-info">
+          <view class="s-title"><text>我厨优选特供青白菜仔300g</text></view>
+          <view class="price-coupon">
+            <view class="no-goods"></view>
+          </view>
+          <view class="price-wrap">
+            <view class="price">
+              ￥6.90
+            </view>
+            <view class="count-change">
+              <view class="decrease">-</view>
+              <view class="count">1</view>
+              <view class="add">+</view>              
+            </view>
+          </view>
+        </view>
+      </view>
+      
+      
+      <view class="goods-content">
+        <view class="check-btn" catchtap="checkChoose2">
+          <text class="circle" wx:if="{{!checkedBol2}}"></text>
+          <icon wx:if="{{checkedBol2}}" type="success" size="18" color="#f96d16"/>
+        </view>
+        <view class="goods-img" bindtap="goGoodsDetail"     data-goodsId="0a932434-eb98-441b-ae64-4183ff0792b3">
+          <image src="http://img.i-kitchen.cn/upload/05f4b644-8ce2-4acc-bee0-888e96849996.jpg"></image>
+        </view>
+        <view class="shop-info">
+          <view class="s-title"><text>腰果爆鸡丁</text></view>
+          <view class="price-coupon">
+            <view class="no-goods">库存紧张</view>
+          </view>
+          <view class="price-wrap">
+            <view class="price">
+              ￥24.90
+            </view>
+            <view class="count-change">
+              <view class="decrease">-</view>
+              <view class="count">2</view>
+              <view class="add">+</view>              
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+      <view class="goods-content">
+        <view class="check-btn" catchtap="checkChoos3">
+          <text class="circle" wx:if="{{!checkedBol3}}"></text>
+          <icon wx:if="{{checkedBol3}}" type="success" size="18" color="#f96d16"/>
+        </view>
+        <view class="goods-img" bindtap="goGoodsDetail"  data-goodsId="0ac05a1a-eff6-4669-ae52-74b0f69ad351">
+          <image src="http://img.i-kitchen.cn/upload/7548c123-7b89-4090-b305-69b19c1ae9ae.jpg"></image>
+        </view>
+        <view class="shop-info">
+          <view class="s-title"><text>光明如实135g无添加酸奶三联装（低温）</text></view>
+          <view class="price-coupon">
+            <view class="no-goods"></view>
+          </view>
+          <view class="price-wrap">
+            <view class="price">
+              ￥19.90
+            </view>
+            <view class="count-change">
+              <view class="decrease">-</view>
+              <view class="count">1</view>
+              <view class="add">+</view>              
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="goods-content">
+        <view class="check-btn" catchtap="checkChoose4">
+          <text class="circle" wx:if="{{!checkedBol4}}"></text>
+          <icon wx:if="{{checkedBol4}}" type="success" size="18" color="#f96d16"/>
+        </view>
+        <view class="goods-img" bindtap="goGoodsDetail"  data-goodsId="ad448465-5aee-4339-8351-b383ef1bf25d">
+          <image src="http://img.i-kitchen.cn/upload/e6026950-d560-43ad-8a69-1d1255258681.jpg"></image>
+        </view>
+        <view class="shop-info">
+          <view class="s-title"><text>冬阴功</text></view>
+          <view class="price-coupon">
+            <view class="no-goods">库存紧张</view>
+          </view>
+          <view class="price-wrap">
+            <view class="price">
+              ￥29.90
+            </view>
+            <view class="count-change">
+              <view class="decrease">-</view>
+              <view class="count">1</view>
+              <view class="add">+</view>              
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+  </view>
+
+  <!--合计部分-->
+  <view class="check-all">
+    <view class="select-all" catchtap="checkChoose5">
+      <text class="circle" wx:if="{{!checkedBol5}}"></text>
+      <icon wx:if="{{checkedBol5}}" type="success" size="18" color="#f96d16"/>
+    </view>
+    <view class="check-price">
+      <view class="total-price">
+        <text>合计：</text>
+        <text class="price-all">￥99.40</text>
+      </view>
+      <view class="sendmsg">
+        不含运费
+      </view>
+    </view>
+    <view class="go-checkout">
+      结算(6)
+    </view>
+  </view>
+</view>

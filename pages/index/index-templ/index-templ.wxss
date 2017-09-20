@@ -1,0 +1,114 @@
+
+.page-type4-view {
+  margin-top: 2rpx;
+  margin-bottom: 2rpx;
+}
+
+.page-type5-view {
+  margin-top: 2rpx;
+  margin-bottom: 2rpx;
+}
+
+.page-type6-view {
+  margin-top: 2rpx;
+  margin-bottom: 2rpx;
+}
+
+.page-type7-view {
+  width: 750rpx;
+  height: 660rpx;
+  margin-top: 2rpx;
+  margin-bottom: 2rpx;
+  display: flex;
+  flex-direction: row; /*默认的方向*/
+  flex-wrap: wrap; /*自动换行*/
+  justify-content: center; /*水平方向居中对齐*/
+}
+
+.page-type4-view image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.page-type5-view image {
+  width: 100%;
+  height: 85rpx;
+}
+
+.page-type6-view image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.goods-view {
+  width: 33%;
+  height: 330rpx;
+  background-color: white;
+}
+
+.goods-view image {
+  width: 100%;
+  height: 240rpx;
+}
+
+.goods-text {
+  height: 80rpx;
+  margin: 5rpx;
+  position: relative;
+}
+
+.goods-name {
+  font-size: 25rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.goods-marketPrice {
+  font-size: 22rpx;
+  color: darkgray;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: line-through;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+}
+
+.goods-price {
+  font-size: 23rpx;
+  color: orange;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.addToCartImage {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute; /*绝对布局 相对于最近已经定位的父视图定位*/
+  right: 10rpx;
+  bottom: 20rpx;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+.movie-list{
+    width:100%;
+}
+.top-scroll-view{
+  width: 100%;
+}
+.scroll-list-container{
+   display: flex;
+   flex-direction: row
+}
+
+.scroll-item{
+  width: 160rpx;
+  display: inline-block;
+  padding: 0 10rpx;
+}

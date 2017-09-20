@@ -1,0 +1,75 @@
+<import src="index-templ/index-templ.wxml" />
+<import src="category-item/category-item.wxml" />
+<view  class="top-view">
+  <scroll-view class="swipe-content" scroll-x="{{true}}" scroll-y="{{false}}" scroll-into-view="{{scrollId}}">
+    <view class="swiper-tab">
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav" id="scroll0">
+        首页
+      </view>
+      <view class="swiper-tab-list {{currentTab==(idx+1) ? 'on' : ''}}" wx:for="{{categoryList}}" wx:for-index="idx" wx:for-item="itemName" data-current="{{idx+1}}" id="scroll{{idx+1}}" bindtap="swichNav">
+        {{itemName.name}}
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <swiper-item>
+    <scroll-view scroll-y="true" style="height: {{srollHeight}}px;"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" upper-threshold="10" lower-threshold="5">
+      <view class="homePage">
+        <!--//首页的轮播图-->
+        <swiper class="home-swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{carousels}}">
+            <swiper-item>
+              <image src="{{item.picUrl}}" />
+            </swiper-item>
+          </block>
+        </swiper>
+        <!--//首页推荐类型-->
+        <!--<view class="recommendedContent">
+      <block wx:for="{{recommendeds}}">
+        <image src="{{item.imgUrl}}" />
+      </block>
+    </view>-->
+        <!--//首页货架-->
+        <view class="home-goods">
+          <block wx:for="{{acts}}">
+            <block wx:if="{{item.templateType==4 ? true : false}}">
+              <template is="pageType4" data="{{commonItems:item.items}}" />
+            </block>
+            <block wx:if="{{item.templateType==5 ? true : false}}">
+              <template is="pageType5" data="{{commonItems:item.items}}" />
+            </block>
+            <block wx:if="{{item.templateType==6 ? true : false}}">
+              <template is="pageType6" data="{{commonItems:item.items}}" />
+            </block>
+            <block wx:if="{{item.templateType==7 ? true : false}}">
+              <template is="pageType7" data="{{commonItems:item.items}}" />
+            </block>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+ <!-- <swiper-item>
+    <scroll-view scroll-y="true" style="height: 750px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" upper-threshold="10" lower-threshold="5">
+      <view class="homePage" bindtap="goDetail">
+        去详情
+      </view>
+    </scroll-view>
+  </swiper-item>-->
+  <swiper-item wx:for="{{categoryList}}" wx:for-index="idx" wx:for-item="itemName">
+  <scroll-view scroll-y="true"  style="height: {{srollHeight}}px;background:#f8f8f8;" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" upper-threshold="10" lower-threshold="5">
+  <view class="data-load" wx:if="{{!canshow}}">
+  <image src="http://192.168.16.32:6200/upload/dcf2c99d-ad88-4170-863d-5fe0ac229db9.gif?v={{currentTab}}"></image>
+  </view>
+    <view class="category-list-contaner" wx:for="{{categories}}" wx:key="id" wx:if="{{canshow}}">
+        <view class="category-list-name">
+            — · {{item.name}} · —
+        </view>
+        <block wx:for="{{item.goods}}" wx:key="goodsGuid">
+           <template is="categoryItem" data="{{item}}"></template>
+        </block>
+    </view>
+  </scroll-view>
+</swiper-item>
+</swiper>
